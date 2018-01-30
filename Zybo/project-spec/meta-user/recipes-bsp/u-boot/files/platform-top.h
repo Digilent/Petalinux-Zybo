@@ -2,6 +2,12 @@
 #include <configs/platform-auto.h>
 
 /* Read GEM MAC Address from EEPROM */
+#define CONFIG_ZYNQ_I2C0
+#define CONFIG_SYS_I2C_ZYNQ
+#define CONFIG_CMD_I2C
+#define CONFIG_SYS_I2C
+#define CONFIG_SYS_I2C_ZYNQ_SPEED             100000
+#define CONFIG_SYS_I2C_ZYNQ_SLAVE             0
 
 #define CONFIG_SYS_I2C_EEPROM_ADDR_LEN 1
 #define CONFIG_CMD_EEPROM
