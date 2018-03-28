@@ -1,6 +1,16 @@
 
 #include <configs/platform-auto.h>
 
+#define CONFIG_SYS_BOOTM_LEN 0xF000000
+
+/*Required for uartless designs */
+#ifndef CONFIG_BAUDRATE
+#define CONFIG_BAUDRATE 115200
+#ifdef CONFIG_DEBUG_UART
+#undef CONFIG_DEBUG_UART
+#endif
+#endif
+
 /* Read GEM MAC Address from EEPROM */
 #define CONFIG_ZYNQ_I2C0
 #define CONFIG_SYS_I2C_ZYNQ

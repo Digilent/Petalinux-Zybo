@@ -33,6 +33,7 @@
 
 &usb0 {	
 	usb-phy = <&usb_phy0>;
+	dr_mode = "host";
 };
 &sdhci0 {
 	u-boot,dm-pre-reloc;
